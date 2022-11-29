@@ -7,10 +7,10 @@ spring:
     gateway:
       routes:
         ## USER SERVICE
-      - id: internet-banking-user-service
-        uri: lb://internet-banking-user-service
+      - id: pet-service
+        uri: lb://pet-service
         predicates:
-          - Path=/user/**
+          - Path=/api/**
         filters:
           - StripPrefix=1
         ## FUND TRANSFER SERVICE
