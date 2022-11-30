@@ -1,11 +1,12 @@
-package com.lsiccha.pet.application.dto;
+package com.lsiccha.pet.domain.models.dto;
 
+import com.lsiccha.pet.domain.models.entities.Admin;
 import lombok.Data;
 
 import java.io.Serializable;
 
 /**
- * A DTO for the {@link com.lsiccha.pet.domain.models.Admin} entity
+ * A DTO for the {@link Admin} entity
  */
 @Data
 public class AdminDto implements Serializable {

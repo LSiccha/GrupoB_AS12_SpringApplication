@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.Usuario;
+import com.lsiccha.pet.domain.models.entities.Usuario;
 import com.lsiccha.pet.domain.repositories.UsuarioRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.UsuarioJpaRepository;
 import lombok.AllArgsConstructor;

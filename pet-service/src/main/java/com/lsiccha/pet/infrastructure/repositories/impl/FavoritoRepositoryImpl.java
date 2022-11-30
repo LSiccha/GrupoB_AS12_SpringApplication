@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.Favorito;
+import com.lsiccha.pet.domain.models.entities.Favorito;
 import com.lsiccha.pet.domain.repositories.FavoritoRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.FavoritoJpaRepository;
 import lombok.AllArgsConstructor;

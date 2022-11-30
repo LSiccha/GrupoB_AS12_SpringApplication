@@ -1,6 +1,6 @@
 package com.lsiccha.pet.application.controllers.contracts;
 
-import com.lsiccha.pet.domain.models.Solicitud;
+import com.lsiccha.pet.domain.models.entities.Solicitud;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

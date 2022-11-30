@@ -1,4 +1,4 @@
-package com.lsiccha.pet.domain.models;
+package com.lsiccha.pet.domain.models.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
