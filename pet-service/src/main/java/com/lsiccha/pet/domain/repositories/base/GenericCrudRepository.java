@@ -1,4 +1,4 @@
-package com.lsiccha.pet.domain.repositories;
+package com.lsiccha.pet.domain.repositories.base;
 
 import java.util.List;
 
