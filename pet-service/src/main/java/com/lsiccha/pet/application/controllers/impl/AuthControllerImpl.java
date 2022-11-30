@@ -12,9 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping(path = "auth")
-@AllArgsConstructor
 public class AuthControllerImpl implements AuthController {
 
     private AuthService authService;

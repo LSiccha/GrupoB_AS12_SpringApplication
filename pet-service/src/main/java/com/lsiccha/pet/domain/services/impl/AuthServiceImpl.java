@@ -1,5 +1,6 @@
 package com.lsiccha.pet.domain.services.impl;
 
+import com.lsiccha.pet.domain.mappers.UsuarioMapper;
 import com.lsiccha.pet.domain.models.entities.Adoptante;
 import com.lsiccha.pet.domain.models.entities.Usuario;
 import com.lsiccha.pet.domain.models.requests.CreateUserRequest;
