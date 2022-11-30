@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.Solicitud;
+import com.lsiccha.pet.domain.models.entities.Solicitud;
 import com.lsiccha.pet.domain.repositories.SolicitudRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.SolicitudJpaRepository;
 import lombok.AllArgsConstructor;

@@ -1,13 +1,12 @@
-package com.lsiccha.pet.application.dto;
+package com.lsiccha.pet.domain.models.dto;
 
-import lombok.AllArgsConstructor;
+import com.lsiccha.pet.domain.models.entities.Mascota;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 /**
- * A DTO for the {@link com.lsiccha.pet.domain.models.Mascota} entity
+ * A DTO for the {@link Mascota} entity
  */
 @Data
 public class MascotaDto implements Serializable {

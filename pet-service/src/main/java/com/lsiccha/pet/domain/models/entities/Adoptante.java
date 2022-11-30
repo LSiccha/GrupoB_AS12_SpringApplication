@@ -1,4 +1,4 @@
-package com.lsiccha.pet.domain.models;
+package com.lsiccha.pet.domain.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;

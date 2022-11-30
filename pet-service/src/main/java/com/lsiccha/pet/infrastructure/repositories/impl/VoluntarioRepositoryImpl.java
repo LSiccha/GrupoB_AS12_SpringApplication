@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.Voluntario;
+import com.lsiccha.pet.domain.models.entities.Voluntario;
 import com.lsiccha.pet.domain.repositories.VoluntarioRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.VoluntarioJpaRepository;
 import lombok.AllArgsConstructor;

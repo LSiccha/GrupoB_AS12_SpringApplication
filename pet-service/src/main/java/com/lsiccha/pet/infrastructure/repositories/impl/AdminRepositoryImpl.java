@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.Admin;
+import com.lsiccha.pet.domain.models.entities.Admin;
 import com.lsiccha.pet.domain.repositories.AdminRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.AdminJpaRepository;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
 package com.lsiccha.pet.infrastructure.repositories.impl;
 
-import com.lsiccha.pet.domain.models.PerfilAdoptante;
+import com.lsiccha.pet.domain.models.entities.PerfilAdoptante;
 import com.lsiccha.pet.domain.repositories.PerfilAdoptanteRepository;
 import com.lsiccha.pet.infrastructure.repositories.jpa.PerfilAdoptanteJpaRepository;
 import lombok.AllArgsConstructor;
