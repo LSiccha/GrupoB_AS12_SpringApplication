@@ -34,4 +34,9 @@ public class SolicitudRepositoryImpl implements SolicitudRepository {
     public void deleteById(Long id) {
         this.solicitudJpaRepository.deleteById(id);
     }
+
+    @Override
+    public List<Solicitud> getAllPendings() {
+        return this.solicitudJpaRepository.getSolicitudByAceptada(false);
+    }
 }
