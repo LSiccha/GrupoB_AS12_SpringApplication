@@ -1,4 +1,4 @@
-package com.lsiccha.discover;
+package com.microservices.discover;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
