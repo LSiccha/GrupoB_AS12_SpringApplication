@@ -6,9 +6,13 @@ import com.microservices.pet.domain.models.dto.FavoritoDto;
 import com.microservices.pet.domain.models.entities.Favorito;
 import com.microservices.pet.domain.models.entities.PerfilAdoptante;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("adoptante")
 public class AdoptanteControllerImpl implements AdoptanteController {
     @Override
     public ResponseEntity<List<AdoptanteDto>> getAll() {

@@ -2,6 +2,7 @@ package com.microservices.pet.domain.services.impl;
 
 import com.microservices.pet.domain.models.dto.AdoptanteDto;
 import com.microservices.pet.domain.models.dto.FavoritoDto;
+import com.microservices.pet.domain.models.entities.PerfilAdoptante;
 import com.microservices.pet.domain.repositories.AdoptanteRepository;
 import com.microservices.pet.domain.repositories.FavoritoRepository;
 import com.microservices.pet.domain.repositories.PerfilAdoptanteRepository;
@@ -22,6 +23,8 @@ public class AdoptanteServiceImpl implements AdoptanteService {
 
     @Override
     public List<AdoptanteDto> getAllAdoptantes() {
+
+
         return null;
     }
 
@@ -45,5 +48,15 @@ public class AdoptanteServiceImpl implements AdoptanteService {
     @Override
     public void deleteFavoritoById(Long id) {
 
+    }
+
+    @Override
+    public PerfilAdoptante getPerfilByAdoptante(Long id) {
+        return this.perfilAdoptanteRepository.getByAdoptanteId(id);
+    }
+
+    @Override
+    public PerfilAdoptante updatePerfil(PerfilAdoptante perfilAdoptante) {
+        return this.perfilAdoptanteRepository.save(perfilAdoptante);
     }
 }
