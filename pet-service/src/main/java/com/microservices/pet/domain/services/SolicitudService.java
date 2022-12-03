@@ -7,6 +7,9 @@ import java.util.List;
 public interface SolicitudService {
     Solicitud createSolicitud(Solicitud solicitud);
     List<Solicitud> getALl();
+    List<Solicitud> getAllPendings();
     Solicitud getOne(Long id);
+
+    Void deleteSolicitud(Long id);
 
 }

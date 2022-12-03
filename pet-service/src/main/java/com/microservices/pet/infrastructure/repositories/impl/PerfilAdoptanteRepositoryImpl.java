@@ -35,4 +35,9 @@ public class PerfilAdoptanteRepositoryImpl implements PerfilAdoptanteRepository 
     public void deleteById(Long id) {
         this.perfilAdoptanteJpaRepository.deleteById(id);
     }
+
+    @Override
+    public PerfilAdoptante getByAdoptanteId(Long id) {
+        return this.perfilAdoptanteJpaRepository.getPerfilAdoptanteByAdoptanteId(id);
+    }
 }
