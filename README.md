@@ -10,8 +10,6 @@ Las herramientas utilizadas en la construcción del proyecto son:
 * [Spring Data JPA](https://spring.io/projects/spring-data-jpa) - Spring Data JPA
 * [Spring Cloud](https://spring.io/projects/spring-cloud) - Spring Cloud
 * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) - Microservices with Spring
-* [oAuth2](https://oauth.net/2/) - oAuth2
-* [JSON Web Tokens](https://jwt.io/) - JWT
 
 
 ## Autores(as) ✒️
