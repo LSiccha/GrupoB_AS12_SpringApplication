@@ -6,7 +6,7 @@ spring:
   cloud:
     gateway:
       routes:
-        ## USER SERVICE
+        ## PET SERVICE
       - id: pet-service
         uri: lb://pet-service
         predicates:
