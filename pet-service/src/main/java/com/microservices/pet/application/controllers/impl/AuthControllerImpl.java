@@ -4,6 +4,7 @@ import com.microservices.pet.application.controllers.contracts.AuthController;
 import com.microservices.pet.domain.mappers.UsuarioMapper;
 import com.microservices.pet.domain.models.dto.UsuarioDto;
 import com.microservices.pet.domain.models.entities.Usuario;
+import com.microservices.pet.domain.models.requests.ChangePasswordRequest;
 import com.microservices.pet.domain.models.requests.CreateUserRequest;
 import com.microservices.pet.domain.services.AuthService;
 import lombok.AllArgsConstructor;
@@ -34,4 +35,17 @@ public class AuthControllerImpl implements AuthController {
 
         return new ResponseEntity<>(usuarioDto, HttpStatus.OK);
     }
+
+    @Override
+    public ResponseEntity<UsuarioDto> changePassword(ChangePasswordRequest changePasswordRequest) {
+        UsuarioDto updated = this.authService.changePassword(changePasswordRequest);
+        return new ResponseEntity<>(updated, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Void> deleteUser(Long id) {
+        this.authService.deleteUser(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

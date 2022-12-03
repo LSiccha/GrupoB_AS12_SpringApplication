@@ -1,7 +1,10 @@
 package com.microservices.pet.domain.services.impl;
 
+import com.microservices.pet.domain.mappers.UsuarioMapper;
+import com.microservices.pet.domain.models.dto.UsuarioDto;
 import com.microservices.pet.domain.models.entities.Adoptante;
 import com.microservices.pet.domain.models.entities.Usuario;
+import com.microservices.pet.domain.models.requests.ChangePasswordRequest;
 import com.microservices.pet.domain.models.requests.CreateUserRequest;
 import com.microservices.pet.domain.models.requests.LoginRequest;
 import com.microservices.pet.domain.repositories.AdminRepository;
@@ -12,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.security.InvalidParameterException;
 import java.time.LocalDate;
 
 @Slf4j
@@ -45,4 +49,23 @@ public class AuthServiceImpl implements AuthService {
     public Usuario login(LoginRequest loginRequest) {
         return null;
     }
+
+    @Override
+    public UsuarioDto changePassword(ChangePasswordRequest changePasswordRequest) {
+        Usuario retrievedFromDb = this.usuarioRepository.getById(changePasswordRequest.getUserId());
+        String currentPassword = retrievedFromDb.getPassword();
+        if (currentPassword.equals(changePasswordRequest.getOldPassword())) {
+            retrievedFromDb.setPassword(changePasswordRequest.getNewPassword());
+            UsuarioDto usuarioDto = UsuarioMapper.INSTANCE.usuarioToUsuarioDto(retrievedFromDb);
+            return usuarioDto;
+        }
+        throw new InvalidParameterException("AEEEA");
+    }
+
+    @Override
+    public void deleteUser(Long id) {
+        this.usuarioRepository.deleteById(id);
+    }
+
+
 }
