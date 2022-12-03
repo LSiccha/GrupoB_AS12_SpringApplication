@@ -23,6 +23,7 @@ Grupo B
 * Ibañez Arteaga, Kevin
 * Desrosiers Pérez, Patrick
 
+## Diagrama
 
 ![Microservicios](README/img/diagrama.png)
 
