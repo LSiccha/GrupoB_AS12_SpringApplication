@@ -5,6 +5,12 @@ spring:
       ##GATEWAY CONFIGURATIONS
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         ## PET SERVICE
       - id: pet-service
@@ -13,6 +19,7 @@ spring:
           - Path=/api/**
         filters:
           - StripPrefix=1
+
 
 server:
   port: 8082
