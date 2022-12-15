@@ -1,8 +1,12 @@
 package com.microservices.pet.domain.models.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
+
+import java.util.Set;
+
 
 @Data
 @Entity
@@ -27,4 +31,11 @@ public class Mascota {
 
     @Column(name = "adoptada")
     private Boolean adoptada;
+
+    @OneToMany(
+            mappedBy = "mascota",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Solicitud> solicitudes;
 }
