@@ -1,7 +1,13 @@
 package com.microservices.pet.domain.models.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.util.List;
+import java.util.Set;
+
 
 @Data
 @Entity
@@ -9,7 +15,9 @@ import lombok.Data;
 public class Mascota {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="seq")
+    @GenericGenerator(name = "seq", strategy="increment")
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -24,4 +32,12 @@ public class Mascota {
 
     @Column(name = "adoptada")
     private Boolean adoptada;
+
+    @JsonIgnore
+    @OneToMany(
+            mappedBy = "mascota",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Solicitud> solicitudes;
 }
