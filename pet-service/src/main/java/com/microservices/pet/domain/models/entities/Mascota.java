@@ -33,6 +33,7 @@ public class Mascota {
     @Column(name = "adoptada")
     private Boolean adoptada;
 
+    @JsonIgnore
     @OneToMany(
             mappedBy = "mascota",
             cascade = CascadeType.ALL,
