@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -37,5 +38,5 @@ public class Mascota {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private Set<Solicitud> solicitudes;
+    private List<Solicitud> solicitudes;
 }
